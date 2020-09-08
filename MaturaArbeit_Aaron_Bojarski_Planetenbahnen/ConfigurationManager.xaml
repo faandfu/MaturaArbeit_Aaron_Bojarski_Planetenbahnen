@@ -1,0 +1,57 @@
+﻿<Window x:Class="MaturaArbeit_Aaron_Bojarski_Planetenbahnen.ConfigurationManager"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MaturaArbeit_Aaron_Bojarski_Planetenbahnen"
+        mc:Ignorable="d"
+        Title="Konfigurations-Manager" Height="386.091" Width="448.867">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Bearbeiten">
+                <Grid>
+                    <ComboBox x:Name="cbb_bodyToChange" Margin="21,21,0,0" Height="22" VerticalAlignment="Top" HorizontalAlignment="Left" Width="113" SelectionChanged="cbb_bodyToChange_SelectionChanged"/>
+                    <Button x:Name="btn_DeleteBody" Content="Körper entfernen" HorizontalAlignment="Left" Margin="191,21,0,0" VerticalAlignment="Top" Width="106" Click="btn_DeleteBody_Click"/>
+                    <TextBox x:Name="txt_Name_Edit" Height="23" Margin="124,54,35,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                    <TextBox x:Name="txt_Mass_Edit" Height="23" Margin="124,153,35,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                    <TextBox x:Name="txt_Velocity_Edit" Height="23" Margin="124,125,35,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                    <TextBox x:Name="txt_Position_Edit" HorizontalAlignment="Left" Height="23" Margin="124,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="276"/>
+                    <Label Content="Name:" HorizontalAlignment="Left" Margin="21,50,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Position (X, Y, Z):" HorizontalAlignment="Left" Margin="21,78,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Geschwindigkeit&#xA;(X, Y, Z):" HorizontalAlignment="Left" Margin="21,106,0,0" VerticalAlignment="Top" Width="98" Height="43"/>
+                    <Label Content="Radius:" HorizontalAlignment="Left" Margin="21,177,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Masse:" HorizontalAlignment="Left" Margin="21,149,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="txt_Radius_Edit" Height="23" Margin="124,181,35,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                    <Label Content="Farbe:" HorizontalAlignment="Left" Margin="21,205,0,0" VerticalAlignment="Top"/>
+                    <Button x:Name="btn_SaveChanges" Content="Veränderung speichern" Margin="262,257,35,0" VerticalAlignment="Top" Height="25" Click="btn_SaveChanges_Click"/>
+                    <Slider x:Name="Slider_Red" HorizontalAlignment="Left" Margin="124,213,0,0" VerticalAlignment="Top" Width="83" Maximum="255" SmallChange="1" LargeChange="10" ValueChanged="Slider_Red_ValueChanged"/>
+                    <Slider x:Name="Slider_Green" HorizontalAlignment="Left" Margin="220,213,0,0" VerticalAlignment="Top" Width="83" Maximum="255" SmallChange="1" LargeChange="10" ValueChanged="Slider_Green_ValueChanged"/>
+                    <Slider x:Name="Slider_Blue" HorizontalAlignment="Left" Margin="317,213,0,0" VerticalAlignment="Top" Width="83" Maximum="255" SmallChange="1" LargeChange="10" ValueChanged="Slider_Blue_ValueChanged"/>
+                    <Label x:Name="lbl_color" Content="         " HorizontalAlignment="Left" Margin="68,205,0,0" VerticalAlignment="Top"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Hinzufügen" >
+                <Grid>
+                    <Button x:Name="btnHinzufügen" Content="Körper hinzufügen" HorizontalAlignment="Left" Margin="302,270,0,0" VerticalAlignment="Top" Width="106" Click="btnHinzufügen_Click" />
+                    <TextBox x:Name="txt_Name_New" Height="23" Margin="132,30,27,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                    <TextBox Height="23" Margin="132,157,27,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
+                    <TextBox x:Name="txt_Mass_New" Height="23" Margin="132,129,27,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                    <TextBox x:Name="txt_Velocity_New" Height="23" Margin="132,101,27,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                    <TextBox x:Name="txt_Position_New" HorizontalAlignment="Left" Height="23" Margin="132,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="276"/>
+                    <Label Content="Name:" HorizontalAlignment="Left" Margin="29,26,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Position (X, Y, Z):" HorizontalAlignment="Left" Margin="29,54,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Geschwindigkeit&#xD;&#xA;(X, Y, Z):" HorizontalAlignment="Left" Margin="29,82,0,0" VerticalAlignment="Top" Width="98" Height="43"/>
+                    <Label Content="Radius:" HorizontalAlignment="Left" Margin="29,153,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Masse:" HorizontalAlignment="Left" Margin="29,125,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="txt_Radius_New" Height="23" Margin="132,157,27,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                    <Label Content="Farbe:" HorizontalAlignment="Left" Margin="29,181,0,0" VerticalAlignment="Top"/>
+                    <Slider x:Name="Slider_Red_New" HorizontalAlignment="Left" Margin="132,189,0,0" VerticalAlignment="Top" Width="83" Maximum="255" SmallChange="1" LargeChange="10" ValueChanged="Slider_Red_New_ValueChanged"/>
+                    <Slider x:Name="Slider_Green_New" HorizontalAlignment="Left" Margin="228,189,0,0" VerticalAlignment="Top" Width="83" Maximum="255" SmallChange="1" LargeChange="10" ValueChanged="Slider_Green_New_ValueChanged"/>
+                    <Slider x:Name="Slider_Blue_New" HorizontalAlignment="Left" Margin="325,189,0,0" VerticalAlignment="Top" Width="83" Maximum="255" SmallChange="1" LargeChange="10" ValueChanged="Slider_Blue_New_ValueChanged"/>
+                    <Label x:Name="lbl_color_New" Content="         " HorizontalAlignment="Left" Margin="76,181,0,0" VerticalAlignment="Top"/>
+
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
